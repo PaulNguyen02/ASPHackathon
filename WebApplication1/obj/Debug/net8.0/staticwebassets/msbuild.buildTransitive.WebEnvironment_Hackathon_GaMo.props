@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\WebEnvironment_Hackathon_GaMo.props" />
+</Project>

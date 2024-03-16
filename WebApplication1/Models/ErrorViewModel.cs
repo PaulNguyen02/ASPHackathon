@@ -1,4 +1,4 @@
-namespace WebApplication1.Models
+namespace WebEnvironment_Hackathon_GaMo.Models
 {
     public class ErrorViewModel
     {

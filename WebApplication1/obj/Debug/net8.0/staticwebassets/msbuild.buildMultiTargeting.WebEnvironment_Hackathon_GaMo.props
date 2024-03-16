@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WebEnvironment_Hackathon_GaMo.props" />
+</Project>

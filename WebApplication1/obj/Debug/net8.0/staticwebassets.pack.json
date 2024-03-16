@@ -1,0 +1,953 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebEnvironment_Hackathon_GaMo.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebEnvironment_Hackathon_GaMo.bundle.scp.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\themes\\css\\animate.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\animated-headline.css",
+      "PackagePath": "staticwebassets\\themes\\css\\animated-headline.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\themes\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\chat.css",
+      "PackagePath": "staticwebassets\\themes\\css\\chat.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\flaticon.css",
+      "PackagePath": "staticwebassets\\themes\\css\\flaticon.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\fontawesome-all.min.css",
+      "PackagePath": "staticwebassets\\themes\\css\\fontawesome-all.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\gijgo.css",
+      "PackagePath": "staticwebassets\\themes\\css\\gijgo.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\hamburgers.min.css",
+      "PackagePath": "staticwebassets\\themes\\css\\hamburgers.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\themes\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\themes\\css\\nice-select.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\themes\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\price_rangs.css",
+      "PackagePath": "staticwebassets\\themes\\css\\price_rangs.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\progressbar_barfiller.css",
+      "PackagePath": "staticwebassets\\themes\\css\\progressbar_barfiller.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\slick.css",
+      "PackagePath": "staticwebassets\\themes\\css\\slick.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\slicknav.css",
+      "PackagePath": "staticwebassets\\themes\\css\\slicknav.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\style.css",
+      "PackagePath": "staticwebassets\\themes\\css\\style.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\style.map",
+      "PackagePath": "staticwebassets\\themes\\css\\style.map"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\css\\themify-icons.css",
+      "PackagePath": "staticwebassets\\themes\\css\\themify-icons.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\themes\\fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\themes\\fonts\\Flaticon.svg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\themes\\fonts\\Flaticon.ttf"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\themes\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\Flaticon.woff2",
+      "PackagePath": "staticwebassets\\themes\\fonts\\Flaticon.woff2"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\_flaticon.scss",
+      "PackagePath": "staticwebassets\\themes\\fonts\\_flaticon.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\themes\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\flaticon.css",
+      "PackagePath": "staticwebassets\\themes\\fonts\\flaticon.css"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\flaticon.html",
+      "PackagePath": "staticwebassets\\themes\\fonts\\flaticon.html"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\gijgo-material.eot",
+      "PackagePath": "staticwebassets\\themes\\fonts\\gijgo-material.eot"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\gijgo-material.svg",
+      "PackagePath": "staticwebassets\\themes\\fonts\\gijgo-material.svg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\gijgo-material.ttf",
+      "PackagePath": "staticwebassets\\themes\\fonts\\gijgo-material.ttf"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\gijgo-material.woff",
+      "PackagePath": "staticwebassets\\themes\\fonts\\gijgo-material.woff"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\themes\\fonts\\themify.eot"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\themes\\fonts\\themify.svg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\themes\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\themes\\fonts\\themify.woff"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\blog\\author.png",
+      "PackagePath": "staticwebassets\\themes\\img\\blog\\author.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\blog\\comment_1.png",
+      "PackagePath": "staticwebassets\\themes\\img\\blog\\comment_1.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\blog\\comment_2.png",
+      "PackagePath": "staticwebassets\\themes\\img\\blog\\comment_2.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\blog\\comment_3.png",
+      "PackagePath": "staticwebassets\\themes\\img\\blog\\comment_3.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\blog\\learn_about_bg.png",
+      "PackagePath": "staticwebassets\\themes\\img\\blog\\learn_about_bg.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\blog\\single_blog_1.png",
+      "PackagePath": "staticwebassets\\themes\\img\\blog\\single_blog_1.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\blog\\single_blog_2.png",
+      "PackagePath": "staticwebassets\\themes\\img\\blog\\single_blog_2.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\blog\\single_blog_3.png",
+      "PackagePath": "staticwebassets\\themes\\img\\blog\\single_blog_3.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\blog\\single_blog_4.png",
+      "PackagePath": "staticwebassets\\themes\\img\\blog\\single_blog_4.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\blog\\single_blog_5.png",
+      "PackagePath": "staticwebassets\\themes\\img\\blog\\single_blog_5.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\blog\\slide_thumb_1.png",
+      "PackagePath": "staticwebassets\\themes\\img\\blog\\slide_thumb_1.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\a.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\a.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\a2.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\a2.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\d.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\d.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\disabled-check.png",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\disabled-check.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\disabled-radio.png",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\disabled-radio.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\f1.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\f1.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\f2.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\f2.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\f3.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\f3.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\f4.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\f4.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\f5.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\f5.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\f6.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\f6.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\f7.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\f7.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\f8.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\f8.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\g1.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\g1.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\g2.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\g2.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\g3.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\g3.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\g4.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\g4.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\g5.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\g5.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\g6.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\g6.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\g7.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\g7.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\g8.jpg",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\g8.jpg"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\primary-check.png",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\primary-check.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\primary-radio.png",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\primary-radio.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\success-check.png",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\success-check.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\elements\\success-radio.png",
+      "PackagePath": "staticwebassets\\themes\\img\\elements\\success-radio.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\themes\\img\\favicon.ico"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\Rectangle 8.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\Rectangle 8.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\case1.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\case1.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\case2.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\case2.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\case3.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\case3.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\footer_bg.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\footer_bg.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\form.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\form.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\home-blog1.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\home-blog1.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\home-blog2.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\home-blog2.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\safe_in.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\safe_in.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\section_bg01.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\section_bg01.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\services1.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\services1.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\services2.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\services2.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\services3.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\services3.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\gallery\\visit_bg.png",
+      "PackagePath": "staticwebassets\\themes\\img\\gallery\\visit_bg.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\hero\\h1_hero1.png",
+      "PackagePath": "staticwebassets\\themes\\img\\hero\\h1_hero1.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\hero\\hero2.png",
+      "PackagePath": "staticwebassets\\themes\\img\\hero\\hero2.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\hero\\slider-video-bg.png",
+      "PackagePath": "staticwebassets\\themes\\img\\hero\\slider-video-bg.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\logo\\loder.png",
+      "PackagePath": "staticwebassets\\themes\\img\\logo\\loder.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\themes\\img\\logo\\logo.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\logo\\logo2_footer.png",
+      "PackagePath": "staticwebassets\\themes\\img\\logo\\logo2_footer.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\next.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\next.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\post_1.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\post_1.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\post_10.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\post_10.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\post_2.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\post_2.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\post_3.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\post_3.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\post_4.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\post_4.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\post_5.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\post_5.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\post_6.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\post_6.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\post_7.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\post_7.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\post_8.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\post_8.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\post_9.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\post_9.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\img\\post\\preview.png",
+      "PackagePath": "staticwebassets\\themes\\img\\post\\preview.png"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\animated.headline.js",
+      "PackagePath": "staticwebassets\\themes\\js\\animated.headline.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\contact.js",
+      "PackagePath": "staticwebassets\\themes\\js\\contact.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\gijgo.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\gijgo.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\hover-direction-snake.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\hover-direction-snake.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\jquery.ajaxchimp.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\jquery.ajaxchimp.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\jquery.barfiller.js",
+      "PackagePath": "staticwebassets\\themes\\js\\jquery.barfiller.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\jquery.countdown.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\jquery.countdown.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\jquery.form.js",
+      "PackagePath": "staticwebassets\\themes\\js\\jquery.form.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\jquery.magnific-popup.js",
+      "PackagePath": "staticwebassets\\themes\\js\\jquery.magnific-popup.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\jquery.paroller.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\jquery.paroller.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\jquery.slicknav.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\jquery.slicknav.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\jquery.sticky.js",
+      "PackagePath": "staticwebassets\\themes\\js\\jquery.sticky.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\mail-script.js",
+      "PackagePath": "staticwebassets\\themes\\js\\mail-script.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\main.js",
+      "PackagePath": "staticwebassets\\themes\\js\\main.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\one-page-nav-min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\one-page-nav-min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\themes\\js\\plugins.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\popper.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\price-range.js",
+      "PackagePath": "staticwebassets\\themes\\js\\price-range.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\slick.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\vendor\\jquery-1.12.4.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\vendor\\jquery-1.12.4.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\vendor\\modernizr-3.5.0.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\vendor\\modernizr-3.5.0.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\waypoints.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\themes\\js\\wow.min.js"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_about.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_about.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_blog_page.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_blog_page.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_bradcam.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_bradcam.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_cases.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_cases.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_color.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_color.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_common.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_common.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_contact.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_contact.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_contact_form.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_contact_form.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_date_tabs.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_date_tabs.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_elements.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_elements.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_extend.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_extend.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_featured-Jobs.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_featured-Jobs.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_footer.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_footer.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_h1-hero.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_h1-hero.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_headerMenu.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_headerMenu.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_overlay.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_overlay.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_services.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_services.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_services_section.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_services_section.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_team.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_team.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_testimonial.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_testimonial.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_variables.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_visit-tailor.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_visit-tailor.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\_wantTowork.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\_wantTowork.scss"
+    },
+    {
+      "Id": "F:\\Hackathon\\WebApplication1\\WebApplication1\\wwwroot\\themes\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\themes\\scss\\style.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebEnvironment_Hackathon_GaMo.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebEnvironment_Hackathon_GaMo.props",
+      "PackagePath": "build\\WebEnvironment_Hackathon_GaMo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebEnvironment_Hackathon_GaMo.props",
+      "PackagePath": "buildMultiTargeting\\WebEnvironment_Hackathon_GaMo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebEnvironment_Hackathon_GaMo.props",
+      "PackagePath": "buildTransitive\\WebEnvironment_Hackathon_GaMo.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

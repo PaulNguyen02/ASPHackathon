@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WebApplication1.Models;
+using WebEnvironment_Hackathon_GaMo.Models;
 
-namespace WebApplication1.Controllers
+namespace WebEnvironment_Hackathon_GaMo.Controllers
 {
     public class HomeController : Controller
     {

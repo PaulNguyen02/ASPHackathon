@@ -1,49 +1,342 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebApplication1</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>RecycleHands - Hãy tái chế rác bằng chính đôi tay của mình</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="/themes/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" />
+    <link rel="stylesheet" href="/themes/css/chat.css">
+    <link rel="stylesheet" href="/themes/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/themes/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/themes/css/slicknav.css">
+    <link rel="stylesheet" href="/themes/css/flaticon.css">
+    <link rel="stylesheet" href="/themes/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="/themes/css/gijgo.css">
+    <link rel="stylesheet" href="/themes/css/animate.min.css">
+    <link rel="stylesheet" href="/themes/css/animated-headline.css">
+    <link rel="stylesheet" href="/themes/css/magnific-popup.css">
+    <link rel="stylesheet" href="/themes/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/themes/css/themify-icons.css">
+    <link rel="stylesheet" href="/themes/css/slick.css">
+    <link rel="stylesheet" href="/themes/css/nice-select.css">
+    <link rel="stylesheet" href="/themes/css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication1</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <button class="chatbot-toggler">
+        <i class="fas fa-comment"></i>
+    </button>
+    <div class="chatbot">
+        <header>
+            <h2>Trợ lý ảo sờ gu</h2>
+            <span class="close-btn material-symbols-outlined"><i class="fas fa-user-alt"></i></span>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined"><i class="fas fa-user-alt"></i></span>
+                <p>Xin chào 👋<br>Hỏi tôi bất kì điều gì?</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Nhập nội dung..." spellcheck="false" required></textarea>
+            <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    const chatbotToggler = document.querySelector(".chatbot-toggler");
+    const closeBtn = document.querySelector(".close-btn");
+    const chatbox = document.querySelector(".chatbox");
+    const chatInput = document.querySelector(".chat-input textarea");
+    const sendChatBtn = document.querySelector(".chat-input span");
+
+    let userMessage = null;
+    const API_KEY = "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";
+    const inputInitHeight = chatInput.scrollHeight;
+
+    const createChatLi = (message, className) => {
+        const chatLi = document.createElement("li");
+        chatLi.classList.add("chat", `${className}`);
+        let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined"></span><p></p>`;
+        chatLi.innerHTML = chatContent;
+        chatLi.querySelector("p").textContent = message;
+        return chatLi;
+    }
+
+    const generateResponse = (chatElement) => {
+        const API_URL = "https://api.openai.com/v1/chat/completions";
+        const messageElement = chatElement.querySelector("p");
+        const prompt1 = "Tự xưng là trợ lý ảo Sờ Gu, trả lời ngắn gọn bằng tiếng việt, tập trung trọng tâm";
+        const prompt2 = "Nội dung trả lời chủ yếu xoay quanh bảo vệ môi trường, giải pháp, tái chế, thực trạng,...";
+
+        const requestOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${API_KEY}`
+            },
+            body: JSON.stringify({
+                model: "gpt-3.5-turbo",
+                messages: [{ role: "user", content: userMessage + prompt1 + prompt2 }],
+            })
+        }
+
+        fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
+            messageElement.textContent = data.choices[0].message.content.trim();
+        }).catch(() => {
+            messageElement.classList.add("error");
+            messageElement.textContent = "Có lỗi xảy ra vui lòng thử lại.";
+        }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
+    }
+
+    const handleChat = () => {
+        userMessage = chatInput.value.trim();
+        if (!userMessage) return;
+
+        chatInput.value = "";
+        chatInput.style.height = `${inputInitHeight}px`;
+
+        chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+        chatbox.scrollTo(0, chatbox.scrollHeight);
+
+        setTimeout(() => {
+            const incomingChatLi = createChatLi("Đang xử lý...", "incoming");
+            chatbox.appendChild(incomingChatLi);
+            chatbox.scrollTo(0, chatbox.scrollHeight);
+            generateResponse(incomingChatLi);
+        }, 600);
+    }
+
+    chatInput.addEventListener("input", () => {
+        chatInput.style.height = `${inputInitHeight}px`;
+        chatInput.style.height = `${chatInput.scrollHeight}px`;
+    });
+
+    chatInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+            e.preventDefault();
+            handleChat();
+        }
+    });
+
+    sendChatBtn.addEventListener("click", handleChat);
+    closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+    chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+</script>
+<!-- ? Preloader Start -->
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="assets/img/logo/loder.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader Start -->
+<header>
+    <!-- Header Start -->
+    <div class="header-area">
+        <div class="main-header ">
+            <div class="header-bottom  header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+                            <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Trang chủ</a></li>
+                                            <li><a href="about.html">Về chúng tôi</a></li>
+                                            <li><a href="what-do.html">Những điều cần làm</a></li>
+                                            <li>
+                                                <a href="blog.html">Blog</a>
+                                                <ul class="submenu">
+                                                    <li><a href="blog.html">Tin tức</a></li>
+                                                    <li><a href="blog_details.html">Chiến dịch</a></li>
+                                                    <li><a href="elements.html">Diễn đàn</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact.html">Liên hệ</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- Header-btn -->
+                                <div class="header-right-btn d-none d-lg-block ml-20">
+                                    <a href="contact.html" class="btn header-btn">Đăng nhập</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - WebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
+    </div>
+    <!-- Header End -->
+</header>
+<main>
+
+   @RenderBody()
+
+</main>
+<footer>
+    <div class="footer-wrapper">
+        <!-- Footer Start-->
+        <div class="footer-area footer-padding">
+            <div class="container ">
+                <div class="row justify-content-between">
+                    <div class="col-xl-4 col-lg-3 col-md-8 col-sm-8">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <!-- logo -->
+                                <div class="footer-logo mb-35">
+                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p>Một thế giới trong sạch, vạn tâm hồn trong xanh</p>
+                                        <p>Bật đúng lúc, tắt đúng giờ, một phút làm ngơ, một ngày mất điện</p>
+                                    </div>
+                                </div>
+                                <!-- social -->
+                                <div class="footer-social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Giải pháp của chúng tôi</h4>
+                                <ul>
+                                    <li><a href="#">Nguồn nước sạch</a></li>
+                                    <li><a href="#">Năng lượng xanh</a></li>
+                                    <li><a href="#">Bảo vệ động vật</a></li>
+                                    <li><a href="#">Tuyên truyền, kêu gọi</a></li>
+                                    <li><a href="#">Cơ sở hạ tầng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Về phía NHỮNG CHÚ GÀ MỜ</h4>
+                                <ul>
+                                    <li><a href="#">Thông tin</a></li>
+                                    <li><a href="#">Giới thiệu</a></li>
+                                    <li><a href="#">Các chính sách của tập đoàn</li>
+                                    <li><a href="#">Chăm sóc khách hàng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-4">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Liên hệ với chúng tôi ngay</h4>
+                                <ul>
+                                    <li><a href="#">kudoshinichi2804@gmail.com</a></li>
+                                    <li><a href="#">273 Đ. An Dương Vương, Phường 3, Quận 5, Thành phố Hồ Chí Minh 700000</a></li>
+                                    <li><a href="#">CEO</li>
+                                    <li class="number"><a href="#">0932690343</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center">
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Bản quyền thuộc về Tập đoàn bảo vệ môi trường "NHỮNG CHÚ GÀ MỜ" </script>Tập đoàn này được thành lập bởi <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://www.facebook.com/nguyenanhit.dev" target="_blank">NHỮNG CHÚ GÀ MỜ </a>&copy;<script>
+                                                                                                                                                                                                                                                                                                document.write(new Date().getFullYear());
+                                    </script>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </div>
+</footer>
+
+<!-- Scroll Up -->
+<div id="back-top">
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+<!-- JS here -->
+
+<script src="/themes/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="/themes/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="/themes/js/popper.min.js"></script>
+<script src="/themes/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="/themes/js/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="/themes/js/owl.carousel.min.js"></script>
+<script src="/themes/js/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="/themes/js/wow.min.js"></script>
+<script src="/themes/js/animated.headline.js"></script>
+<script src="/themes/js/jquery.magnific-popup.js"></script>
+
+<!-- Date Picker -->
+<script src="/themes/js/gijgo.min.js"></script>
+<!-- Nice-select, sticky -->
+<script src="/themes/js/jquery.nice-select.min.js"></script>
+<script src="/themes/js/jquery.sticky.js"></script>
+<!-- Progress -->
+<script src="/themes/js/jquery.barfiller.js"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="/themes/js/jquery.counterup.min.js"></script>
+<script src="/themes/js/waypoints.min.js"></script>
+<script src="/themes/js/jquery.countdown.min.js"></script>
+<script src="/themes/js/hover-direction-snake.min.js"></script>
+
+<!-- contact js -->
+<script src="/themes/js/contact.js"></script>
+<script src="/themes/js/jquery.form.js"></script>
+<script src="/themes/js/jquery.validate.min.js"></script>
+<script src="/themes/js/mail-script.js"></script>
+<script src="/themes/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->
+<script src="/themes/js/plugins.js"></script>
+<script src="/themes/js/main.js"></script>
+@RenderSection("Scripts", required: false)
 </html>
