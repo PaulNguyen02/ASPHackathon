@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebEnvironment_Hackathon_GaMo.Models.Forum>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<main>
+	<!--? Hero Start -->
+	<div class="slider-area2">
+		<div class="slider-height2 d-flex align-items-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="hero-cap hero-cap2 pt-70">
+							<h2>Elements</h2>
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item"><a href="#">Elements</a></li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Hero End -->
+	<!--? Start Sample Area -->
+	@foreach (var item in Model)
+	{
+		<section class="sample-text-area">
+			<div class="container box_1170">
+				<h3 class="text-heading">@item.Title_Post</h3>
+				<p class="sample-text">@item.Description</p>
+				<center><h3>@item.Created_At</h3></center>
+			</div>
+		</section>	
+	}
+</main>
+
+
+
+
+
+
