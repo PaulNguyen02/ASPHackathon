@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Hackathon\\WebApplication1\\WebApplication1\\WebEnvironment_Hackathon_GaMo.csproj": {}
+    "C:\\Users\\Paul\\Desktop\\Hackathon2024\\ASPHackathon\\WebApplication1\\WebEnvironment_Hackathon_GaMo.csproj": {}
   },
   "projects": {
-    "D:\\Hackathon\\WebApplication1\\WebApplication1\\WebEnvironment_Hackathon_GaMo.csproj": {
+    "C:\\Users\\Paul\\Desktop\\Hackathon2024\\ASPHackathon\\WebApplication1\\WebEnvironment_Hackathon_GaMo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Hackathon\\WebApplication1\\WebApplication1\\WebEnvironment_Hackathon_GaMo.csproj",
+        "projectUniqueName": "C:\\Users\\Paul\\Desktop\\Hackathon2024\\ASPHackathon\\WebApplication1\\WebEnvironment_Hackathon_GaMo.csproj",
         "projectName": "WebEnvironment_Hackathon_GaMo",
-        "projectPath": "D:\\Hackathon\\WebApplication1\\WebApplication1\\WebEnvironment_Hackathon_GaMo.csproj",
+        "projectPath": "C:\\Users\\Paul\\Desktop\\Hackathon2024\\ASPHackathon\\WebApplication1\\WebEnvironment_Hackathon_GaMo.csproj",
         "packagesPath": "C:\\Users\\Paul\\.nuget\\packages\\",
-        "outputPath": "D:\\Hackathon\\WebApplication1\\WebApplication1\\obj\\",
+        "outputPath": "C:\\Users\\Paul\\Desktop\\Hackathon2024\\ASPHackathon\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Paul\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,6 +67,10 @@
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             }
           },
           "imports": [

@@ -216,6 +216,11 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
                     b.Property<string>("Title_Post")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -229,6 +234,17 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Forum", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ID_Post = 1,
+                            Created_At = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8908),
+                            Description = "Phân loại rác thải là quá trình phân chia các loại rác thành các nhóm khác nhau dựa trên tính chất và cách xử lý sau này. ",
+                            ImageUrl = "/themes/img/gallery/services1.png",
+                            Title_Post = "Cho tôi hỏi về cách phân loại rác thải?",
+                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                        });
                 });
 
             modelBuilder.Entity("WebEnvironment_Hackathon_GaMo.Models.News", b =>
@@ -243,9 +259,10 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("Created_by")
+                    b.Property<string>("Created_by")
+                        .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("datetime2");
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -275,10 +292,60 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         new
                         {
                             Id_New = 1,
-                            Created_at = new DateTime(2024, 3, 16, 20, 11, 27, 380, DateTimeKind.Local).AddTicks(4501),
-                            Created_by = new DateTime(2024, 3, 16, 20, 11, 27, 380, DateTimeKind.Local).AddTicks(4520),
+                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8744),
+                            Created_by = "Admin",
                             Description = "Tin tức về rác thải nhựa",
-                            ImageUrl = "/themes/img/gallery/case1.png",
+                            ImageUrl = "/themes/img/post/post_1.png",
+                            Title = "Tin tức về rác thải nhựa",
+                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                        },
+                        new
+                        {
+                            Id_New = 2,
+                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8761),
+                            Created_by = "Admin",
+                            Description = "Tin tức về rác thải nhựa",
+                            ImageUrl = "/themes/img/post/post_2.png",
+                            Title = "Tin tức về rác thải nhựa",
+                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                        },
+                        new
+                        {
+                            Id_New = 3,
+                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8763),
+                            Created_by = "Admin",
+                            Description = "Tin tức về rác thải nhựa",
+                            ImageUrl = "/themes/img/post/post_3.png",
+                            Title = "Tin tức về rác thải nhựa",
+                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                        },
+                        new
+                        {
+                            Id_New = 4,
+                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8764),
+                            Created_by = "Admin",
+                            Description = "Tin tức về rác thải nhựa",
+                            ImageUrl = "/themes/img/post/post_4.png",
+                            Title = "Tin tức về rác thải nhựa",
+                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                        },
+                        new
+                        {
+                            Id_New = 5,
+                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8766),
+                            Created_by = "Admin",
+                            Description = "Tin tức về rác thải nhựa",
+                            ImageUrl = "/themes/img/post/post_5.png",
+                            Title = "Tin tức về rác thải nhựa",
+                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                        },
+                        new
+                        {
+                            Id_New = 6,
+                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8767),
+                            Created_by = "Admin",
+                            Description = "Tin tức về rác thải nhựa",
+                            ImageUrl = "/themes/img/post/post_6.png",
                             Title = "Tin tức về rác thải nhựa",
                             UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
                         });
@@ -420,7 +487,7 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         {
                             Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "48751f1f-5636-4a3a-9671-ab50ba8aee64",
+                            ConcurrencyStamp = "9e656ac3-aeaa-40ea-a069-fb8ddf2d070a",
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             Location = "HCM",
@@ -429,7 +496,7 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
                             Password = "Admin123",
-                            PasswordHash = "AQAAAAIAAYagAAAAEOAfkzvJ9+E0us0Bukmh68Of6y1rl6nQ6AxE6SQuv4vVUXxHetrG7twoSohyW0uS2g==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQSORMLUV8FaVWy6k41KNbpjkAUOIMluR6/q/oA8iAuyLViwNrYKH97BDjpZQepPw==",
                             PhoneNumberConfirmed = false,
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com",
@@ -439,7 +506,7 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         {
                             Id = new Guid("b64cc01d-4317-4a44-88f6-a0cc4e2709ab"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "288ad6ab-cb4a-4127-b854-805a018ed0d2",
+                            ConcurrencyStamp = "6c193b8f-9fe1-4b34-8ebd-b91c6f10f7bd",
                             Email = "user@example.com",
                             EmailConfirmed = true,
                             Location = "HCM",
@@ -448,7 +515,7 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                             NormalizedEmail = "USER@EXAMPLE.COM",
                             NormalizedUserName = "USER@EXAMPLE.COM",
                             Password = "User123",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPqioHzilOmw1+1s7wMkxdHagxdDYnRieXmpAGze1NQphAEVkdvB5FgOuAJhd2QZdQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAEvmZDTTWMFAToHN7Be928aUfuUvNuDyV+NpslgPNN1LeVsNm7uW0i3UEWkCEMjCg==",
                             PhoneNumberConfirmed = false,
                             TwoFactorEnabled = false,
                             UserName = "user@example.com",

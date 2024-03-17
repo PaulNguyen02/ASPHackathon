@@ -3,43 +3,92 @@
 @{
     ViewData["Title"] = "Index";
 }
-<main>
-	<!--? Hero Start -->
-	<div class="slider-area2">
-		<div class="slider-height2 d-flex align-items-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-xl-12">
-						<div class="hero-cap hero-cap2 pt-70">
-							<h2>Elements</h2>
-							<nav aria-label="breadcrumb">
-								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item"><a href="#">Elements</a></li>
-								</ol>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Hero End -->
-	<!--? Start Sample Area -->
-	@foreach (var item in Model)
-	{
-		<section class="sample-text-area">
-			<div class="container box_1170">
-				<h3 class="text-heading">@item.Title_Post</h3>
-				<p class="sample-text">@item.Description</p>
-				<center><h3>@item.Created_At</h3></center>
-			</div>
-		</section>	
-	}
-</main>
 
+<!--? Hero Start -->
+<div class="slider-area2">
+    <div class="slider-height2 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap hero-cap2 pt-70">
+                        <h2>What we do</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">What we do</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+<!--? Services Area Start -->
+<div class="service-area section-padding30">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-11">
+                    <div class="single-cat text-center mb-30">
+                    <div class="cat-icon">
+                        <img src="@item.ImageUrl" alt="">
+                    </div>
+                    <div class="cat-cap">
+                            <h5><a href="#">@Html.DisplayFor(modelItem => item.Description)</a></h5>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- Services Area End -->
+<!--? About Area Start -->
+<section class="support-company-area fix pb-padding">
+    {}
+        <div class="support-wrapper align-items-center">
+             @foreach (var item in Model) {
+            <div class="left-content">
+                <!-- section tittle -->
+            
+                <div class="section-tittle section-tittle2 mb-30">
 
+                <span>@Html.DisplayFor(modelItem => item.Title_Post)</span>
+                    <h2>A lot of animals need protection</h2>
+                
+                </div>
+                <div class="support-caption">
+                    <p class="pera-top">
+                    
+                    @Html.DisplayFor(modelItem => item.Description)
+                </p>
+                <a href="#" class="border-btn">Join Us Now</a>
+                
+            </div>
+            
+        </div>
+        <div class="right-content">
+            <!-- img -->
+            <div class="right-img">
+                <img src="/themes/img/gallery/safe_in.png" alt="">
+            </div>
+            <div class="support-img-cap text-center d-flex">
+                <div class="single-one">
+                    <span>950</span>
+                        <p>@Html.DisplayFor(modelItem => item.Title_Post)</p>
+                </div>
+                <div class="single-two">
+                    <span>230</span>
+                    <p>Volunteers worldwide</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
 
-
-
+</section>
+<!-- About Area End -->
 

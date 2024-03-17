@@ -1,21 +1,23 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebEnvironment_Hackathon_GaMo.Context;
 
-namespace WebApplication1.Controllers
+namespace WebEnvironment_Hackathon_GaMo.Controllers
 {
     public class ForumController : Controller
     {
-        private readonly WebEnviDbContext context;
-        // GET: ForumController
+        private readonly WebEnviDbContext _context;
         public ForumController(WebEnviDbContext context)
         {
-            this.context = context;
+            _context = context;
         }
-        public ActionResult Index()
+        // GET: ForumController
+        public async Task< ActionResult> Index()
         {
-			var posts = (from post in context.Forums select post).ToList();
-			return View(posts);
+            return _context.Forums != null ?
+                          View(await _context.Forums.ToListAsync()) :
+                          Problem("Entity set 'BookStoreMVCWebContext.Book'  is null.");
         }
 
         // GET: ForumController/Details/5

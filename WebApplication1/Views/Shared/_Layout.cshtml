@@ -161,15 +161,15 @@
                                 <div class="main-menu d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">Trang chủ</a></li>
+                                            <li><a asp-controller="Home" asp-action="Index">Trang chủ</a></li>
                                             <li><a href="about.html">Về chúng tôi</a></li>
-                                            <li><a href="what-do.html">Những điều cần làm</a></li>
+                                            <li><a asp-controller="Forum" asp-action="Index">Những điều cần làm</a></li>
                                             <li>
-                                                <a href="/Blog/Index">Tin tức</a>
+                                                <a href="blog.html">Blog</a>
                                                 <ul class="submenu">
-                                                    <li><a href="/Blog/Index">Tin tức</a></li>
-                                                    <li><a href="#">Chiến dịch</a></li>
-                                                    <li><a href="/Forum/Index">Diễn đàn</a></li>
+                                                    <li><a asp-controller ="News" asp-action="Index">Tin tức</a></li>
+                                                    <li><a href="blog_details.html">Chiến dịch</a></li>
+                                                    <li><a asp-controller="Forum" asp-action="Index">Diễn đàn</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html">Liên hệ</a></li>
@@ -178,7 +178,7 @@
                                 </div>
                                 <!-- Header-btn -->
                                 <div class="header-right-btn d-none d-lg-block ml-20">
-                                    <a href="contact.html" class="btn header-btn">Đăng nhập</a>
+                                    <a asp-controller="User" asp-action="Login" class="btn header-btn">Đăng nhập</a>
                                 </div>
                             </div>
                         </div>

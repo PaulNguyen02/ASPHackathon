@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebEnvironment_Hackathon_GaMo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b52508b70afcc04c88a4f54979932346512271a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebEnvironment_Hackathon_GaMo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebEnvironment_Hackathon_GaMo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

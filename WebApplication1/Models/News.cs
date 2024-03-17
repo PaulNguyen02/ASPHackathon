@@ -7,7 +7,7 @@
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public DateTime Created_at { get; set; }
-        public DateTime Created_by { get; set; }
+        public string Created_by { get; set; }
         public Guid UserId { get; set; }
         public User User { get; set; }
 

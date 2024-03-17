@@ -18,12 +18,75 @@ namespace WebEnvironment_Hackathon_GaMo.Extensions
                      Id_New = 1,
                      Title = "Tin tức về rác thải nhựa",
                      Description = "Tin tức về rác thải nhựa",
-                     ImageUrl = "/themes/img/gallery/case1.png",
+                     ImageUrl = "/themes/img/post/post_1.png",
                      Created_at = DateTime.Now,
-                     Created_by = DateTime.Now,
+                     Created_by = "Admin",
                      UserId = adminId
-                 }
+                 },
+                  new News
+                  {
+                      Id_New = 2,
+                      Title = "Tin tức về rác thải nhựa",
+                      Description = "Tin tức về rác thải nhựa",
+                      ImageUrl = "/themes/img/post/post_2.png",
+                      Created_at = DateTime.Now,
+                      Created_by = "Admin",
+                      UserId = adminId
+                  },
+                   new News
+                   {
+                       Id_New = 3,
+                       Title = "Tin tức về rác thải nhựa",
+                       Description = "Tin tức về rác thải nhựa",
+                       ImageUrl = "/themes/img/post/post_3.png",
+                       Created_at = DateTime.Now,
+                       Created_by = "Admin",
+                       UserId = adminId
+                   }
+                   ,
+                    new News
+                    {
+                        Id_New = 4,
+                        Title = "Tin tức về rác thải nhựa",
+                        Description = "Tin tức về rác thải nhựa",
+                        ImageUrl = "/themes/img/post/post_4.png",
+                        Created_at = DateTime.Now,
+                        Created_by = "Admin",
+                        UserId = adminId
+                    },
+                     new News
+                     {
+                         Id_New = 5,
+                         Title = "Tin tức về rác thải nhựa",
+                         Description = "Tin tức về rác thải nhựa",
+                         ImageUrl = "/themes/img/post/post_5.png",
+                         Created_at = DateTime.Now,
+                         Created_by = "Admin",
+                         UserId = adminId
+                     },
+                      new News
+                      {
+                          Id_New = 6,
+                          Title = "Tin tức về rác thải nhựa",
+                          Description = "Tin tức về rác thải nhựa",
+                          ImageUrl = "/themes/img/post/post_6.png",
+                          Created_at = DateTime.Now,
+                          Created_by = "Admin",
+                          UserId = adminId
+                      }
                  );
+            modelbuilder.Entity<Forum>().HasData(
+                new Forum
+                {
+                    ID_Post=1,
+                    Title_Post="Cho tôi hỏi về cách phân loại rác thải?",
+                    Description= "Phân loại rác thải là quá trình phân chia các loại rác thành các nhóm khác nhau dựa trên tính chất và cách xử lý sau này. ",
+                    ImageUrl="/themes/img/gallery/services1.png",
+                    Created_At=DateTime.Now,
+                    UserId=adminId
+                }
+
+                );
             SeedUser(modelbuilder);
         }
         
