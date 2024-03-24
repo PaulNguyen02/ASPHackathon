@@ -2,10 +2,8 @@
 
 namespace WebEnvironment_Hackathon_GaMo.Models
 {
-    public class UserRole:IdentityRole<Guid>
+    public class UserRole:IdentityRole
     {
-    
-      
-        public string Description { get; set; }
+    public string Description { get; set; }
     }
 }

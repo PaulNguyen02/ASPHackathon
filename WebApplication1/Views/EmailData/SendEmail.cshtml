@@ -1,0 +1,71 @@
+﻿@model WebEnvironment_Hackathon_GaMo.Models.EmailData
+
+<h4 class="text-success mt-4">Send Email</h4>
+<hr class="text-success" />
+<div class="d-flex justify-content-center">
+    <div class="alert alert-info alert-dismissible fade show text-secondary indexText col-6" role="alert">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="SendEmail" method="post">
+            <div class="col-12 mb-3">
+                <label asp-for="To" class="text-success">Nhập địa chỉ mail cần gửi</label>
+                <input asp-for="To" class="form-control" />
+                <span asp-validation-for="To" class="text-danger"></span>
+            </div>
+            <div class="col-12 mb-3">
+                <label asp-for="Subject" class="text-success">Tên tiêu đề</label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="col-12 mb-3">
+                <label asp-for="Body" class="text-success">Nhập vào nội dung cần gửi</label>
+                <textarea asp-for="Body" class="form-control" id="editor" rows="3"></textarea>
+                <span asp-validation-for="Body" class="text-danger"></span>
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-outline-success">Gửi Email</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
+    <partial src="_ValidationScriptsPartial.cshtml"></partial>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+}
+
+<script>
+    // Bước 1: Lấy dữ liệu RSS
+    fetch('https://vnexpress.net/rss/suc-khoe.rss')
+        .then(response => response.text())
+        .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+        .then(data => {
+            // Bước 2 và 3: Phân tích và trích xuất dữ liệu
+            const items = data.querySelectorAll("item");
+            let emailContent = "";
+            for (let i = 0; i < 3; i++) {
+                const title = items[i].querySelector("title").textContent;
+                const link = items[i].querySelector("link").textContent;
+                emailContent += `Tiêu đề: ${title}\nLink: ${link}\n`;
+            }
+
+            // Bước 4: Chèn dữ liệu vào form
+            document.querySelector("#editor").value = emailContent;
+
+            // Khởi tạo lại CKEditor để cập nhật nội dung textarea
+            ClassicEditor
+                .create(document.querySelector('#editor'))
+                .catch(error => {
+                    console.error(error);
+                });
+        })
+        .catch(error => console.log('Có lỗi xảy ra', error));
+
+</script>

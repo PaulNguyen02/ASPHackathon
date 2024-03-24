@@ -11,11 +11,11 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap hero-cap2 pt-70">
-                        <h2>What we do</h2>
+                        <h2>Diễn đàn</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">What we do</a></li>
+                                <li class="breadcrumb-item"><a href="/Home/Index">Trang chủ</a></li>
+                                <li class="breadcrumb-item"><a href="/Forum/Index">Diễn đàn</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -56,8 +56,8 @@
             
                 <div class="section-tittle section-tittle2 mb-30">
 
-                <span>@Html.DisplayFor(modelItem => item.Title_Post)</span>
-                    <h2>A lot of animals need protection</h2>
+                    <span>@Html.DisplayFor(modelItem => item.Created_At)</span>
+                    <h2>@Html.DisplayFor(modelItem => item.Title_Post)</h2>
                 
                 </div>
                 <div class="support-caption">
@@ -65,8 +65,7 @@
                     
                     @Html.DisplayFor(modelItem => item.Description)
                 </p>
-                <a href="#" class="border-btn">Join Us Now</a>
-                
+                <a href="#" class="border-btn">Bình luận</a>                
             </div>
             
         </div>
@@ -74,17 +73,7 @@
             <!-- img -->
             <div class="right-img">
                 <img src="/themes/img/gallery/safe_in.png" alt="">
-            </div>
-            <div class="support-img-cap text-center d-flex">
-                <div class="single-one">
-                    <span>950</span>
-                        <p>@Html.DisplayFor(modelItem => item.Title_Post)</p>
-                </div>
-                <div class="single-two">
-                    <span>230</span>
-                    <p>Volunteers worldwide</p>
-                </div>
-            </div>
+            </div>            
         </div>
         }
     </div>

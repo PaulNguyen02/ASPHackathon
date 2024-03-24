@@ -9,6 +9,7 @@ namespace WebEnvironment_Hackathon_GaMo.Models.ViewModel
         public string UserName { get; set; }
         [Required(ErrorMessage = "Làm ơn nhập Email"), EmailAddress]
         public string Email { get; set; }
+        public string Location { get; set; }
         [DataType(DataType.Password), Required(ErrorMessage = "Làm ơn nhập Password")]
         public string Password { get; set; }
     }

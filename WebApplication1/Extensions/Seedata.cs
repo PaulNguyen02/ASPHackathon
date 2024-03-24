@@ -21,7 +21,7 @@ namespace WebEnvironment_Hackathon_GaMo.Extensions
                      ImageUrl = "/themes/img/post/post_1.png",
                      Created_at = DateTime.Now,
                      Created_by = "Admin",
-                     UserId = adminId
+                     UserId = "1"
                  },
                   new News
                   {
@@ -31,7 +31,7 @@ namespace WebEnvironment_Hackathon_GaMo.Extensions
                       ImageUrl = "/themes/img/post/post_2.png",
                       Created_at = DateTime.Now,
                       Created_by = "Admin",
-                      UserId = adminId
+                      UserId = "1"
                   },
                    new News
                    {
@@ -41,7 +41,7 @@ namespace WebEnvironment_Hackathon_GaMo.Extensions
                        ImageUrl = "/themes/img/post/post_3.png",
                        Created_at = DateTime.Now,
                        Created_by = "Admin",
-                       UserId = adminId
+                       UserId ="1"
                    }
                    ,
                     new News
@@ -52,7 +52,7 @@ namespace WebEnvironment_Hackathon_GaMo.Extensions
                         ImageUrl = "/themes/img/post/post_4.png",
                         Created_at = DateTime.Now,
                         Created_by = "Admin",
-                        UserId = adminId
+                        UserId = "1"
                     },
                      new News
                      {
@@ -62,7 +62,7 @@ namespace WebEnvironment_Hackathon_GaMo.Extensions
                          ImageUrl = "/themes/img/post/post_5.png",
                          Created_at = DateTime.Now,
                          Created_by = "Admin",
-                         UserId = adminId
+                         UserId = "1"
                      },
                       new News
                       {
@@ -72,7 +72,7 @@ namespace WebEnvironment_Hackathon_GaMo.Extensions
                           ImageUrl = "/themes/img/post/post_6.png",
                           Created_at = DateTime.Now,
                           Created_by = "Admin",
-                          UserId = adminId
+                          UserId = "1"
                       }
                  );
             modelbuilder.Entity<Forum>().HasData(
@@ -83,7 +83,7 @@ namespace WebEnvironment_Hackathon_GaMo.Extensions
                     Description= "Phân loại rác thải là quá trình phân chia các loại rác thành các nhóm khác nhau dựa trên tính chất và cách xử lý sau này. ",
                     ImageUrl="/themes/img/gallery/services1.png",
                     Created_At=DateTime.Now,
-                    UserId=adminId
+                    UserId="1"
                 }
 
                 );
@@ -98,15 +98,14 @@ namespace WebEnvironment_Hackathon_GaMo.Extensions
             var regularId = new Guid("b64cc01d-4317-4a44-88f6-a0cc4e2709ab");
             var adminUser = new User
             {
-                Id = adminId,
-                Name = "AdminWeb",
+                Id = "1",
                 UserName = "admin@example.com",
                 Email = "admin@example.com",
                 NormalizedUserName = "ADMIN@EXAMPLE.COM",
                 NormalizedEmail = "ADMIN@EXAMPLE.COM",
                 EmailConfirmed = true,
                 permission="Admin",
-                Password="Admin123",
+  
                 Location="HCM"
             };
             adminUser.PasswordHash = new PasswordHasher<User>().HashPassword(adminUser, "Admin123");
@@ -115,21 +114,19 @@ namespace WebEnvironment_Hackathon_GaMo.Extensions
 
             // Assign Admin user to Admin role
             modelbuilder.Entity<UserRole>().HasData(
-                new UserRole() { Id = roleId, Name = "Admin", NormalizedName = "ADMIN" , Description="Admin", },
-                new UserRole() { Id = roleId2, Name = "User", NormalizedName = "USER" ,Description="User"}
+                new UserRole() { Id = "1", Name = "Admin", NormalizedName = "ADMIN" , Description="Admin", },
+                new UserRole() { Id = "2", Name = "User", NormalizedName = "USER" ,Description="User"}
             );
-             modelbuilder.Entity<IdentityUserRole<Guid>>().HasData(
-                new IdentityUserRole<Guid> { RoleId = roleId, UserId = adminId }
+             modelbuilder.Entity<IdentityUserRole<string>>().HasData(
+                new IdentityUserRole<string> { RoleId = "1", UserId = "1"}
             );
             // Seed regular User
             var regularUser = new User
             {
-                Id = regularId,
-                Name="User",
-
+                Id = "2",
                 permission="User",
                 Location="HCM",
-                Password="User123",
+                
                 UserName = "user@example.com",
                 Email = "user@example.com",
                 NormalizedUserName = "USER@EXAMPLE.COM",
@@ -139,8 +136,8 @@ namespace WebEnvironment_Hackathon_GaMo.Extensions
             regularUser.PasswordHash = new PasswordHasher<User>().HashPassword(regularUser, "User123");
 
             modelbuilder.Entity<User>().HasData(regularUser);
-            modelbuilder.Entity<IdentityUserRole<Guid>>().HasData(
-                new IdentityUserRole<Guid> { RoleId = roleId2, UserId =regularId }
+            modelbuilder.Entity<IdentityUserRole<string>>().HasData(
+                new IdentityUserRole<string> { RoleId = "2", UserId ="2" }
             );
             // Assign regular User to User role
 

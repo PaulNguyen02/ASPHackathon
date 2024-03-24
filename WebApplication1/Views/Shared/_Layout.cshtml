@@ -26,9 +26,10 @@
     <link rel="stylesheet" href="/themes/css/slick.css">
     <link rel="stylesheet" href="/themes/css/nice-select.css">
     <link rel="stylesheet" href="/themes/css/style.css">
+    <link rel="stylesheet" href="../wwwroot/css/Chart.css">
 </head>
 
-<body>
+<body onload="getData(); Charting();">
     <button class="chatbot-toggler">
         <i class="fas fa-comment"></i>
     </button>
@@ -58,7 +59,7 @@
     const sendChatBtn = document.querySelector(".chat-input span");
 
     let userMessage = null;
-    const API_KEY = "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";
+   
     const inputInitHeight = chatInput.scrollHeight;
 
     const createChatLi = (message, className) => {
@@ -162,23 +163,40 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a asp-controller="Home" asp-action="Index">Trang chủ</a></li>
-                                            <li><a href="about.html">Về chúng tôi</a></li>
-                                            <li><a asp-controller="Forum" asp-action="Index">Những điều cần làm</a></li>
+                                            <li><a asp-controller="About" asp-action="Index">Về chúng tôi</a></li>
+                                            @if (User.Identity?.IsAuthenticated ?? false)
+                                    {
+                                                <li><a asp-controller="Chart" asp-action="Index">Chất lượng không khí</a></li>
+                                            }
+                                            else
+                                            {
+                                                
+                                            }
                                             <li>
-                                                <a href="blog.html">Blog</a>
+                                                <a asp-controller="News" asp-action="Index">Blog</a>
                                                 <ul class="submenu">
-                                                    <li><a asp-controller ="News" asp-action="Index">Tin tức</a></li>
-                                                    <li><a href="blog_details.html">Chiến dịch</a></li>
+                                                    <li><a asp-controller ="News" asp-action="Index">Tin tức</a></li>                                          
                                                     <li><a asp-controller="Forum" asp-action="Index">Diễn đàn</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Liên hệ</a></li>
+                                            <li><a asp-controller="EmailData" asp-action="Index">Liên hệ</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                                 <!-- Header-btn -->
                                 <div class="header-right-btn d-none d-lg-block ml-20">
-                                    <a asp-controller="User" asp-action="Login" class="btn header-btn">Đăng nhập</a>
+                                    @if (User.Identity?.IsAuthenticated ?? false)
+                                    {
+                                        <a asp-action="Logout" asp-controller="User" class="btn header-btn">
+                                            <i class="fa fa-lock"></i><span >Hi, @User.Identity.Name, Logout</span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="User" asp-action="Login" class="btn header-btn">Đăng nhập</a>
+                                    }
+
+                                   
                                 </div>
                             </div>
                         </div>
@@ -338,5 +356,6 @@
 <!-- Jquery Plugins, main Jquery -->
 <script src="/themes/js/plugins.js"></script>
 <script src="/themes/js/main.js"></script>
+<script src="/themes/js/Fetch.js"></script>
 @RenderSection("Scripts", required: false)
 </html>
