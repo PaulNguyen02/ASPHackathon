@@ -9,8 +9,8 @@ namespace WebEnvironment_Hackathon_GaMo.Configurations
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.ToTable("Users");
-            builder.Property(x => x.Name).IsRequired().HasMaxLength(255);
-            builder.Property(x => x.Password).IsRequired().HasMaxLength(255);
+            builder.Property(x => x.UserName).IsRequired().HasMaxLength(255);
+         //   builder.Property(x => x.Password).IsRequired().HasMaxLength(255);
             builder.Property(x => x.permission).IsRequired();
         }
     }

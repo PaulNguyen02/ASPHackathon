@@ -22,6 +22,35 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles", (string)null);
+
+                    b.UseTptMappingStrategy();
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.Property<int>("Id")
@@ -38,6 +67,29 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
 
                     b.Property<Guid>("RoleId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AppRoleClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -65,12 +117,57 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
 
                     b.HasKey("Id");
 
+                    b.ToTable("AppUserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("AspNetUserClaims", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LoginProvider")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProviderKey")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("AppUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
                         .HasColumnType("nvarchar(450)");
@@ -81,8 +178,9 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -101,6 +199,19 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
 
                     b.HasKey("UserId", "RoleId");
 
+                    b.ToTable("AppUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
@@ -108,20 +219,42 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
-                            RoleId = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc")
+                            UserId = "1",
+                            RoleId = "1"
                         },
                         new
                         {
-                            UserId = new Guid("b64cc01d-4317-4a44-88f6-a0cc4e2709ab"),
-                            RoleId = new Guid("1b45cfef-cddb-4ff3-86b1-541d37493649")
+                            UserId = "2",
+                            RoleId = "2"
                         });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
                 {
                     b.Property<Guid>("UserId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LoginProvider")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("AppUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
                         .HasColumnType("nvarchar(450)");
@@ -148,8 +281,9 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                     b.Property<int>("Id_Mission")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Order_num");
 
@@ -226,8 +360,9 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ID_Post");
 
@@ -239,11 +374,11 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         new
                         {
                             ID_Post = 1,
-                            Created_At = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8908),
+                            Created_At = new DateTime(2024, 3, 23, 23, 40, 23, 115, DateTimeKind.Local).AddTicks(6353),
                             Description = "Phân loại rác thải là quá trình phân chia các loại rác thành các nhóm khác nhau dựa trên tính chất và cách xử lý sau này. ",
                             ImageUrl = "/themes/img/gallery/services1.png",
                             Title_Post = "Cho tôi hỏi về cách phân loại rác thải?",
-                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                            UserId = "1"
                         });
                 });
 
@@ -279,8 +414,9 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id_New");
 
@@ -292,62 +428,62 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         new
                         {
                             Id_New = 1,
-                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8744),
+                            Created_at = new DateTime(2024, 3, 23, 23, 40, 23, 115, DateTimeKind.Local).AddTicks(6187),
                             Created_by = "Admin",
                             Description = "Tin tức về rác thải nhựa",
                             ImageUrl = "/themes/img/post/post_1.png",
                             Title = "Tin tức về rác thải nhựa",
-                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                            UserId = "1"
                         },
                         new
                         {
                             Id_New = 2,
-                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8761),
+                            Created_at = new DateTime(2024, 3, 23, 23, 40, 23, 115, DateTimeKind.Local).AddTicks(6201),
                             Created_by = "Admin",
                             Description = "Tin tức về rác thải nhựa",
                             ImageUrl = "/themes/img/post/post_2.png",
                             Title = "Tin tức về rác thải nhựa",
-                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                            UserId = "1"
                         },
                         new
                         {
                             Id_New = 3,
-                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8763),
+                            Created_at = new DateTime(2024, 3, 23, 23, 40, 23, 115, DateTimeKind.Local).AddTicks(6203),
                             Created_by = "Admin",
                             Description = "Tin tức về rác thải nhựa",
                             ImageUrl = "/themes/img/post/post_3.png",
                             Title = "Tin tức về rác thải nhựa",
-                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                            UserId = "1"
                         },
                         new
                         {
                             Id_New = 4,
-                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8764),
+                            Created_at = new DateTime(2024, 3, 23, 23, 40, 23, 115, DateTimeKind.Local).AddTicks(6204),
                             Created_by = "Admin",
                             Description = "Tin tức về rác thải nhựa",
                             ImageUrl = "/themes/img/post/post_4.png",
                             Title = "Tin tức về rác thải nhựa",
-                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                            UserId = "1"
                         },
                         new
                         {
                             Id_New = 5,
-                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8766),
+                            Created_at = new DateTime(2024, 3, 23, 23, 40, 23, 115, DateTimeKind.Local).AddTicks(6205),
                             Created_by = "Admin",
                             Description = "Tin tức về rác thải nhựa",
                             ImageUrl = "/themes/img/post/post_5.png",
                             Title = "Tin tức về rác thải nhựa",
-                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                            UserId = "1"
                         },
                         new
                         {
                             Id_New = 6,
-                            Created_at = new DateTime(2024, 3, 17, 6, 25, 2, 363, DateTimeKind.Local).AddTicks(8767),
+                            Created_at = new DateTime(2024, 3, 23, 23, 40, 23, 115, DateTimeKind.Local).AddTicks(6207),
                             Created_by = "Admin",
                             Description = "Tin tức về rác thải nhựa",
                             ImageUrl = "/themes/img/post/post_6.png",
                             Title = "Tin tức về rác thải nhựa",
-                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de")
+                            UserId = "1"
                         });
                 });
 
@@ -389,8 +525,9 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ID_Product");
 
@@ -401,9 +538,8 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
 
             modelBuilder.Entity("WebEnvironment_Hackathon_GaMo.Models.User", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
@@ -429,11 +565,6 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -441,11 +572,6 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
@@ -463,6 +589,7 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
@@ -485,38 +612,36 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
+                            Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9e656ac3-aeaa-40ea-a069-fb8ddf2d070a",
+                            ConcurrencyStamp = "8edbffdc-bdb5-4ece-bb46-2e21d91eea75",
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             Location = "HCM",
                             LockoutEnabled = false,
-                            Name = "AdminWeb",
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            Password = "Admin123",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPQSORMLUV8FaVWy6k41KNbpjkAUOIMluR6/q/oA8iAuyLViwNrYKH97BDjpZQepPw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMJ6fQeKFgg2KHslby0Sidn7+KwwOu91aFnSiffALwOYYiGDVv3a54hqJPvp2Old3w==",
                             PhoneNumberConfirmed = false,
+                            SecurityStamp = "26a2e16c-dbbc-44d5-bc54-540ac2e11f65",
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com",
                             permission = "Admin"
                         },
                         new
                         {
-                            Id = new Guid("b64cc01d-4317-4a44-88f6-a0cc4e2709ab"),
+                            Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6c193b8f-9fe1-4b34-8ebd-b91c6f10f7bd",
+                            ConcurrencyStamp = "d663449d-39a6-4f8a-b16d-c74a60008dd6",
                             Email = "user@example.com",
                             EmailConfirmed = true,
                             Location = "HCM",
                             LockoutEnabled = false,
-                            Name = "User",
                             NormalizedEmail = "USER@EXAMPLE.COM",
                             NormalizedUserName = "USER@EXAMPLE.COM",
-                            Password = "User123",
-                            PasswordHash = "AQAAAAIAAYagAAAAEAEvmZDTTWMFAToHN7Be928aUfuUvNuDyV+NpslgPNN1LeVsNm7uW0i3UEWkCEMjCg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGp9djtVgeDgJ2CSnbf4sBlu56TyGjN0Map8D2utqSYdObsGQH3CV3koUvJCYWVEPg==",
                             PhoneNumberConfirmed = false,
+                            SecurityStamp = "db04adf5-b27e-4bab-b0bf-15fef092a76b",
                             TwoFactorEnabled = false,
                             UserName = "user@example.com",
                             permission = "User"
@@ -525,63 +650,42 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
 
             modelBuilder.Entity("WebEnvironment_Hackathon_GaMo.Models.UserRole", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityRole");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedName")
-                        .IsUnique()
-                        .HasDatabaseName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
-
-                    b.ToTable("AspNetRoles", (string)null);
+                    b.ToTable("UserRole", (string)null);
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"),
-                            Description = "Admin",
+                            Id = "1",
                             Name = "Admin",
-                            NormalizedName = "ADMIN"
+                            NormalizedName = "ADMIN",
+                            Description = "Admin"
                         },
                         new
                         {
-                            Id = new Guid("1b45cfef-cddb-4ff3-86b1-541d37493649"),
-                            Description = "User",
+                            Id = "2",
                             Name = "User",
-                            NormalizedName = "USER"
+                            NormalizedName = "USER",
+                            Description = "User"
                         });
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
-                    b.HasOne("WebEnvironment_Hackathon_GaMo.Models.UserRole", null)
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
                     b.HasOne("WebEnvironment_Hackathon_GaMo.Models.User", null)
                         .WithMany()
@@ -590,7 +694,7 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.HasOne("WebEnvironment_Hackathon_GaMo.Models.User", null)
                         .WithMany()
@@ -599,9 +703,9 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
-                    b.HasOne("WebEnvironment_Hackathon_GaMo.Models.UserRole", null)
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -614,7 +718,7 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
                     b.HasOne("WebEnvironment_Hackathon_GaMo.Models.User", null)
                         .WithMany()
@@ -665,6 +769,15 @@ namespace WebEnvironment_Hackathon_GaMo.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("WebEnvironment_Hackathon_GaMo.Models.UserRole", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithOne()
+                        .HasForeignKey("WebEnvironment_Hackathon_GaMo.Models.UserRole", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("WebEnvironment_Hackathon_GaMo.Models.User", b =>

@@ -6,6 +6,7 @@ using System.Text.Encodings.Web;
 using System.Text;
 using WebEnvironment_Hackathon_GaMo.Models;
 using WebEnvironment_Hackathon_GaMo.Models.ViewModel;
+using WebEnvironment_Hackathon_GaMo.Services;
 
 namespace WebEnvironment_Hackathon_GaMo.Controllers
 {
@@ -13,17 +14,17 @@ namespace WebEnvironment_Hackathon_GaMo.Controllers
     {
         private UserManager<User> _userManager;
         private SignInManager<User> _signInManager;
+        private EmailSender _emailsender;
         private ILogger<UserController> _logger;
         private IConfiguration _configuration { get; }
         public UserController(SignInManager<User> signInManager,
-            UserManager<User> userManager, ILogger<UserController> logger, IConfiguration configuration)
+            UserManager<User> userManager, ILogger<UserController> logger, IConfiguration configuration, EmailSender emailSender)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _logger = logger;
             _configuration = configuration;
-          
-
+            _emailsender = emailSender;
         }
 
         public IActionResult Login(string returnUrl)
@@ -41,7 +42,7 @@ namespace WebEnvironment_Hackathon_GaMo.Controllers
                 if (result.Succeeded)
                 {
 
-                    return Redirect("/Home");
+                    return Redirect("/home");
 
                     //return Redirect(loginVm.ReturnUrl ?? "/admin");
                 }
@@ -77,16 +78,28 @@ namespace WebEnvironment_Hackathon_GaMo.Controllers
                 User newUser = new User
                 {
                     UserName = user.UserName,
-                    Email = user.Email,
-                    Password=user.Password
-
+                    Location=user.Location,
+                    permission="User",
+                    Email=user.Email,
+                    //Password=user.Password
+                    
                 };
                 IdentityResult result = await _userManager.CreateAsync(newUser, user.Password);
                 if (result.Succeeded)
                 {
-                   
-                    TempData["success"] = "Tạo user Thành Công ";
-                    return Redirect("/account/Login");
+                    _logger.LogInformation("User created a new account with password.");
+                    var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
+                    token = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+                    var callbackUrl = Url.Page(
+                     "/User/login",
+                     pageHandler: null,
+                     values: new { area = "Identity", userId = user.Id, token = token, returnUrl = "Clicking me" },
+                     protocol: Request.Scheme);
+                     _emailsender.SendEmail(user.Email, "Confirm your Email",
+                     $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                     _logger.LogInformation("User created a new account with password.");
+                     TempData["success"] = "Tạo user Thành Công ";
+                     return Redirect("/user/Login");
                 }
                 foreach (IdentityError error in result.Errors)
                 {
@@ -94,6 +107,11 @@ namespace WebEnvironment_Hackathon_GaMo.Controllers
                 }
             }
             return View(user);
+        }
+        public async Task<IActionResult> LogOut(string ReturnUrl = "/home")
+        {
+            await _signInManager.SignOutAsync();
+            return Redirect(ReturnUrl);
         }
     }
 }

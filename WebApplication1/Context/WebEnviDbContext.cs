@@ -8,7 +8,7 @@ using WebEnvironment_Hackathon_GaMo.Models;
 
 namespace WebEnvironment_Hackathon_GaMo.Context
 {
-    public class WebEnviDbContext: IdentityDbContext<User, UserRole, Guid>
+    public class WebEnviDbContext: IdentityDbContext<User>
     {
         public WebEnviDbContext(DbContextOptions options) : base(options)
         {
